@@ -6,6 +6,10 @@ the answer isn't in the documents.
 
 Week 3 project (RAG Knowledge Management Product). **Status: working app, evaluated (32 questions) and experiments done. Results: [evaluation sheet](evals/casino-knowledge-assistant-evaluation.xlsx), [experiments](docs/casino-knowledge-assistant-07-experiment-results.md).**
 
+**Start here:** [Product document](docs/casino-knowledge-assistant-01-product-document.md) (problem, users, scope, architecture, decisions, risks, limitations, next steps)
+
+![Architecture](docs/casino-knowledge-assistant-04-architecture-diagram.png)
+
 All documents in `data/policies/` are **mock documents for a fictional company**,
 written for this project. They are not real policies and not legal advice.
 
@@ -49,7 +53,7 @@ With no API key, set `LLM_PROVIDER=mock` to try the app without AI (answers are 
 | `app/streamlit_app.py` | The app: Ask, Policy library, Upload, How it works |
 | `config/roles.yaml` | Which documents each role can search |
 | `prompts/` | The instructions given to the AI |
-| `docs/` | Decision log (product document, architecture, risks to come) |
+| `docs/` | 01 product document, 03 decision log, 04 architecture diagram (and the script that draws it), 07 experiment results |
 | `tests/` | Automated tests |
 
 ## The document set
