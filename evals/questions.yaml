@@ -1,0 +1,225 @@
+# Evaluation questions (Week 3 brief: 25-30 questions across these categories).
+#
+# Fields:
+#   expected_answer  what a correct answer says, in plain words (for people reading the sheet)
+#   sources          policy sections that contain the answer ("DOC-ID#section"); empty when there is no answer
+#   must_include     facts the answer must contain. Each item is one fact; "a|b" means either wording counts
+#   must_not_include facts that would show a wrong (e.g. outdated) policy was used
+#   forbidden_docs   documents this role must never see (access control check)
+#   expect           found | not_found
+#
+# Categories: simple, section, wording, confusable, spread, outdated, missing, restricted
+
+questions:
+  # --- Simple ---------------------------------------------------------------------------------------
+  - id: Q01
+    category: simple
+    question: How many days of annual leave do full-time employees get?
+    expected_answer: 28 days a year, including bank holidays (more with long service, up to 30).
+    sources: [HR-LEAVE-2026#4, GEN-HANDBOOK#6]
+    must_include: ["28"]
+  - id: Q02
+    category: simple
+    question: When do we get paid?
+    expected_answer: Monthly, on the last working day of the month.
+    sources: [GEN-HANDBOOK#5]
+    must_include: ["last working day"]
+  - id: Q03
+    category: simple
+    question: How long is the probation period for new starters?
+    expected_answer: 6 months, with reviews at 3 and 6 months; can be extended by up to 3 months.
+    sources: [HR-ONBOARD-2025#4]
+    must_include: ["6 months|six months|6-month|six-month"]
+  - id: Q04
+    category: simple
+    question: What is the mileage rate if I use my own car for work?
+    expected_answer: 45p per mile (normal commuting can't be claimed).
+    sources: [FIN-EXPENSES-2025#3]
+    must_include: ["45p|45 pence"]
+  - id: Q05
+    category: simple
+    question: How long does my password need to be?
+    expected_answer: At least 14 characters, with MFA wherever supported.
+    sources: [SEC-INFOSEC-2025#4, IT-AUP-2025#7]
+    must_include: ["14"]
+
+  # --- Specific section -----------------------------------------------------------------------------
+  - id: Q06
+    category: section
+    question: How quickly must a customer complaint be acknowledged?
+    expected_answer: Within 2 working days (final response within 8 weeks).
+    sources: [CS-COMPLAINTS-2025#5]
+    must_include: ["2 working days|two working days"]
+  - id: Q07
+    category: section
+    question: How much company sick pay do I get if I've worked here for 4 years?
+    expected_answer: 4 weeks at full pay in any rolling 12 months (after probation), on top of SSP.
+    sources: [HR-SICK-2025#4]
+    must_include: ["4 weeks|four weeks"]
+  - id: Q08
+    category: section
+    question: What support can I get for studying a qualification?
+    expected_answer: Course fees up to £1,000 a year and up to 5 days' paid study leave, after probation.
+    sources: [HR-TRAIN-2025#4]
+    must_include: ["1,000|1000", "5 days|five days"]
+  - id: Q09
+    category: section
+    question: If I leave 18 months after the company paid for my course, do I have to pay anything back?
+    expected_answer: Yes, 50% of the course fees (leaving between 12 and 24 months after the course).
+    sources: [HR-TRAIN-2025#5]
+    must_include: ["50%|50 per cent|half"]
+  - id: Q10
+    category: section
+    question: Is there an allowance for working from home?
+    expected_answer: £26 a month for employees contracted to work remotely at least 1 day a week.
+    sources: [HR-WORKPLACE-2025#4]
+    must_include: ["26"]
+
+  # --- Different wording from the policy ------------------------------------------------------------
+  - id: Q11
+    category: wording
+    question: Can I roll over unused holiday into next year?
+    expected_answer: Yes, up to 8 days, which must be used by 30 June.
+    sources: [HR-LEAVE-2026#5]
+    must_include: ["8 days|eight days", "30 June"]
+    must_not_include: ["31 March"]
+  - id: Q12
+    category: wording
+    question: I clicked a dodgy link in an email. What should I do?
+    expected_answer: Report it to the IT Service Desk immediately (and use Report Phish for suspicious emails).
+    sources: [SEC-INFOSEC-2025#6, SEC-INCIDENT-2025#3]
+    must_include: ["IT Service Desk"]
+  - id: Q13
+    category: wording
+    question: Can I keep the tips a punter gives me at the blackjack table?
+    expected_answer: No. Gaming staff tips go in the tronc box and are shared through the tronc scheme.
+    sources: [GEN-CONDUCT#3]
+    must_include: ["tronc"]
+  - id: Q14
+    category: wording
+    question: I'm too poorly to work my shift on the casino floor. How early do I need to ring in?
+    expected_answer: At least 2 hours before the shift starts, by phone to the line manager or duty manager.
+    sources: [HR-SICK-2025#2]
+    must_include: ["2 hours|two hours"]
+
+  # --- Similar policies that could be confused --------------------------------------------------------
+  - id: Q15
+    category: confusable
+    question: How quickly do I have to report a lost company laptop?
+    expected_answer: Immediately, and in any case within 1 hour, to the IT Service Desk.
+    sources: [SEC-INFOSEC-2025#5, SEC-INCIDENT-2025#3]
+    must_include: ["1 hour|one hour"]
+  - id: Q16
+    category: confusable
+    question: What happens to my annual leave if I'm ill while I'm on holiday?
+    expected_answer: With a fit note, those days count as sickness and the leave is given back. Report it on day one.
+    sources: [HR-SICK-2025#7]
+    must_include: ["fit note"]
+  - id: Q17
+    category: confusable
+    question: Where do I report a customer I think is laundering money?
+    expected_answer: Directly to the MLRO with the internal suspicious activity report form, not SafeLog; never tell the customer.
+    sources: [SEC-INCIDENT-2025#4, COMP-GUIDE-2025#4]
+    must_include: ["MLRO|Money Laundering Reporting Officer"]
+  - id: Q18
+    category: confusable
+    question: Can I claim my course fees back on expenses?
+    expected_answer: No. Course fees are paid directly by the company under the Training Policy.
+    sources: [FIN-EXPENSES-2025#6, HR-TRAIN-2025#6]
+    must_include: ["directly"]
+  - id: Q19
+    category: confusable
+    question: Someone on the gaming floor looks under 18. What do I do?
+    expected_answer: Ask for photo ID (Think 25), tell the duty manager immediately, and log it before the end of the shift.
+    sources: [SEC-INCIDENT-2025#3, COMP-GUIDE-2025#7]
+    must_include: ["ID", "duty manager"]
+
+  # --- Answer spread across sections ----------------------------------------------------------------
+  - id: Q20
+    category: spread
+    question: I was off sick for months last year and couldn't use my leave. How much can I carry over and by when?
+    expected_answer: Up to 20 days because of long-term sickness, to be used within 18 months of the end of that leave year.
+    sources: [HR-LEAVE-2026#8]
+    must_include: ["20", "18 months"]
+  - id: Q21
+    category: spread
+    question: Can gaming floor staff take two weeks off over Christmas?
+    expected_answer: No. 24 Dec to 1 Jan is a peak period; at most 5 consecutive days, and only with the General Manager's approval.
+    sources: [HR-LEAVE-2026#7]
+    must_include: ["5|five", "General Manager"]
+  - id: Q22
+    category: spread
+    question: How much notice do I need to give to book a week of annual leave?
+    expected_answer: Twice the length of the leave, so 10 days for 5 days of leave; later if the rota is already published.
+    sources: [HR-LEAVE-2026#6]
+    must_include: ["twice|10 days|ten days"]
+    must_not_include: ["2 weeks' notice|two weeks' notice"]
+
+  # --- Outdated document exists ---------------------------------------------------------------------
+  - id: Q23
+    category: outdated
+    question: How much annual leave can I carry forward?
+    expected_answer: Up to 8 days, used by 30 June (the 2024 rule of 5 days by 31 March no longer applies).
+    sources: [HR-LEAVE-2026#5]
+    must_include: ["8 days|eight days", "30 June"]
+    must_not_include: ["31 March"]
+  - id: Q24
+    category: outdated
+    question: How many days a week can office staff work from home?
+    expected_answer: Up to 2 days with manager agreement; Tuesday and Wednesday are office days (not 3, as in 2023).
+    sources: [HR-WORKPLACE-2025#3]
+    must_include: ["2 days|two days"]
+    must_not_include: ["3 days|three days"]
+  - id: Q25
+    category: outdated
+    question: Am I allowed to work from abroad for a few days?
+    expected_answer: Office-based staff can, for up to 10 working days a year, with manager and Information Security approval in advance.
+    sources: [HR-WORKPLACE-2025#6]
+    must_include: ["10"]
+
+  # --- Answer not in the documents ------------------------------------------------------------------
+  - id: Q26
+    category: missing
+    question: How much maternity pay will I get?
+    expected_answer: Not covered by the policies.
+    expect: not_found
+  - id: Q27
+    category: missing
+    question: Do employees get a company car?
+    expected_answer: Not covered by the policies.
+    expect: not_found
+  - id: Q28
+    category: missing
+    question: How much does the company pay into my pension?
+    expected_answer: Not covered by the policies.
+    expect: not_found
+
+  # --- Restricted documents (access control) --------------------------------------------------------
+  - id: Q29
+    category: restricted
+    role: Employee
+    question: Can I be suspended during a disciplinary investigation?
+    expected_answer: Not available to employees (HR-only procedure), so the assistant should say it doesn't have the information.
+    expect: not_found
+    forbidden_docs: [HR-DISC-INV-2025]
+  - id: Q30
+    category: restricted
+    role: HR
+    question: Can an employee be suspended during a disciplinary investigation?
+    expected_answer: Only where there's a risk to people, evidence or the investigation, or possible gross misconduct; on full pay, reviewed every 2 weeks.
+    sources: [HR-DISC-INV-2025#3]
+    must_include: ["full pay"]
+  - id: Q31
+    category: restricted
+    role: Employee
+    question: How long does the MLRO have to decide whether to report a suspicious activity report to the NCA?
+    expected_answer: Not available to employees (Compliance-only procedure), so the assistant should say it doesn't have the information.
+    expect: not_found
+    forbidden_docs: [COMP-AML-INV-2025]
+  - id: Q32
+    category: restricted
+    role: Compliance
+    question: How long does the MLRO have to decide whether to report a suspicious activity report to the NCA?
+    expected_answer: Within 5 working days of receiving the internal SAR.
+    sources: [COMP-AML-INV-2025#4]
+    must_include: ["5 working days|five working days"]

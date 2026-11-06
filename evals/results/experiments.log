@@ -1,0 +1,245 @@
+
+=== small chunks, top 3 ===
+Q01 PASS  3.20s  
+Q02 PASS  1.21s  
+Q03 PASS  1.32s  
+Q04 PASS  1.00s  
+Q05 PASS  1.25s  
+Q06 PASS  1.28s  
+Q07 PASS  3.90s  
+Q08 PASS  1.72s  
+Q09 PASS  3.78s  
+Q10 PASS  1.22s  
+Q11 PASS  1.78s  
+Q12 PASS  1.54s  
+Q13 PASS  3.06s  
+Q14 PASS  1.40s  
+Q15 PASS  1.07s  
+Q16 PASS  1.18s  
+Q17 PASS  1.19s  
+Q18 PASS  1.29s  
+Q19 PASS  1.09s  
+Q20 PASS  2.56s  
+Q21 PASS  1.43s  
+Q22 PASS  1.47s  
+Q23 PASS  1.67s  
+Q24 FAIL  2.34s  missed answer
+Q25 PASS  3.19s  
+Q26 PASS  0.12s  
+Q27 PASS  1.07s  
+Q28 PASS  1.30s  
+Q29 PASS  1.02s  
+Q30 PASS  1.22s  
+Q31 PASS  1.31s  
+Q32 PASS  1.14s  
+
+=== small chunks, top 5 ===
+Q01 PASS  2.86s  
+Q02 PASS  1.20s  
+Q03 PASS  1.17s  
+Q04 PASS  1.06s  
+Q05 PASS  1.68s  
+Q06 PASS  1.29s  
+Q07 PASS  2.63s  
+Q08 PASS  1.66s  
+Q09 PASS  4.04s  
+Q10 PASS  1.60s  
+Q11 PASS  2.93s  
+Q12 PASS  1.38s  
+Q13 PASS  1.12s  
+Q14 PASS  1.72s  
+Q15 PASS  1.44s  
+Q16 PASS  1.37s  
+Q17 PASS  1.28s  
+Q18 PASS  1.72s  
+Q19 PASS  1.55s  
+Q20 PASS  1.47s  
+Q21 PASS  2.25s  
+Q22 PASS  1.58s  
+Q23 PASS  1.51s  
+Q24 FAIL  2.82s  missing fact: 2 days|two days
+Q25 PASS  2.71s  
+Q26 PASS  0.12s  
+Q27 PASS  1.22s  
+Q28 PASS  1.12s  
+Q29 PASS  1.24s  
+Q30 PASS  1.58s  
+Q31 PASS  1.57s  
+Q32 PASS  1.60s  
+
+=== section chunks, top 3 ===
+Q01 PASS  1.72s  
+Q02 PASS  1.36s  
+Q03 PASS  1.08s  
+Q04 PASS  1.23s  
+Q05 PASS  1.10s  
+Q06 PASS  1.09s  
+Q07 PASS  1.16s  
+Q08 PASS  1.31s  
+Q09 PASS  1.48s  
+Q10 PASS  1.15s  
+Q11 PASS  1.53s  
+Q12 PASS  1.83s  
+Q13 PASS  1.17s  
+Q14 PASS  1.39s  
+Q15 PASS  1.16s  
+Q16 PASS  1.20s  
+Q17 PASS  1.14s  
+Q18 PASS  1.17s  
+Q19 PASS  1.35s  
+Q20 PASS  1.75s  
+Q21 PASS  1.85s  
+Q22 PASS  1.40s  
+Q23 PASS  1.59s  
+Q24 PASS  1.23s  
+Q25 PASS  1.95s  
+Q26 PASS  0.11s  
+Q27 PASS  1.14s  
+Q28 PASS  1.22s  
+Q29 PASS  1.14s  
+Q30 PASS  1.06s  
+Q31 PASS  1.37s  
+Q32 PASS  1.68s  
+
+=== section chunks, top 5 ===
+Q01 PASS  1.95s  
+Q02 PASS  1.10s  
+Q03 PASS  1.38s  
+Q04 PASS  1.12s  
+Q05 PASS  5.54s  
+Q06 PASS  1.05s  
+Q07 PASS  1.14s  
+Q08 PASS  1.33s  
+Q09 PASS  1.40s  
+Q10 PASS  2.09s  
+Q11 PASS  3.00s  
+Q12 PASS  1.52s  
+Q13 PASS  1.24s  
+Q14 PASS  1.27s  
+Q15 PASS  1.12s  
+Q16 PASS  1.53s  
+Q17 PASS  1.36s  
+Q18 PASS  1.23s  
+Q19 PASS  1.44s  
+Q20 PASS  3.52s  
+Q21 PASS  1.73s  
+Q22 PASS  1.29s  
+Q23 PASS  2.03s  
+Q24 PASS  1.40s  
+Q25 PASS  1.69s  
+Q26 PASS  0.11s  
+Q27 PASS  1.11s  
+Q28 PASS  0.97s  
+Q29 PASS  1.09s  
+Q30 PASS  1.84s  
+Q31 PASS  1.26s  
+Q32 PASS  1.47s  
+
+=== large chunks, top 3 ===
+Q01 PASS  1.23s  
+Q02 PASS  1.19s  
+Q03 PASS  1.10s  
+Q04 PASS  1.16s  
+Q05 PASS  1.05s  
+Q06 PASS  1.07s  
+Q07 PASS  1.46s  
+Q08 PASS  1.37s  
+Q09 PASS  2.44s  
+Q10 PASS  1.63s  
+Q11 PASS  1.67s  
+Q12 PASS  3.53s  
+Q13 PASS  1.41s  
+Q14 FAIL  1.66s  missed answer (right section not retrieved)
+Q15 PASS  1.16s  
+Q16 PASS  2.03s  
+Q17 PASS  1.36s  
+Q18 PASS  1.62s  
+Q19 PASS  2.11s  
+Q20 FAIL  4.26s  missed answer
+Q21 PASS  2.13s  
+Q22 PASS  3.85s  
+Q23 PASS  1.77s  
+Q24 PASS  1.27s  
+Q25 PASS  2.63s  
+Q26 PASS  0.41s  
+Q27 PASS  1.43s  
+Q28 PASS  1.15s  
+Q29 PASS  1.14s  
+Q30 PASS  1.18s  
+Q31 PASS  1.19s  
+Q32 PASS  1.65s  
+
+=== large chunks, top 5 ===
+Q01 PASS  1.59s  
+Q02 PASS  1.20s  
+Q03 PASS  1.68s  
+Q04 PASS  1.23s  
+Q05 PASS  0.99s  
+Q06 PASS  1.31s  
+Q07 PASS  1.37s  
+Q08 PASS  1.57s  
+Q09 PASS  2.11s  
+Q10 PASS  1.92s  
+Q11 PASS  2.25s  
+Q12 PASS  6.11s  
+Q13 PASS  1.59s  
+Q14 FAIL  1.88s  missed answer (right section not retrieved)
+Q15 PASS  1.39s  
+Q16 PASS  2.22s  
+Q17 PASS  2.31s  
+Q18 PASS  1.38s  
+Q19 PASS  1.42s  
+Q20 PASS  4.25s  
+Q21 PASS  3.21s  
+Q22 PASS  1.59s  
+Q23 PASS  3.54s  
+Q24 PASS  1.51s  
+Q25 PASS  2.54s  
+Q26 PASS  0.39s  
+Q27 PASS  1.45s  
+Q28 PASS  1.59s  
+Q29 PASS  1.51s  
+Q30 PASS  1.44s  
+Q31 PASS  1.64s  
+Q32 PASS  2.20s  
+
+=== section chunks, top 5, NO version filter ===
+Q01 PASS  4.53s  
+Q02 PASS  1.69s  
+Q03 PASS  1.22s  
+Q04 PASS  1.15s  
+Q05 PASS  1.18s  
+Q06 PASS  1.04s  
+Q07 PASS  1.27s  
+Q08 PASS  1.40s  
+Q09 PASS  1.36s  
+Q10 PASS  1.76s  
+Q11 FAIL  1.79s  used outdated or wrong rule: 31 March
+Q12 PASS  2.18s  
+Q13 PASS  1.11s  
+Q14 PASS  3.89s  
+Q15 PASS  1.36s  
+Q16 PASS  1.10s  
+Q17 PASS  1.61s  
+Q18 PASS  1.22s  
+Q19 PASS  1.52s  
+Q20 PASS  2.29s  
+Q21 PASS  2.03s  
+Q22 PASS  1.54s  
+Q23 FAIL  2.14s  used outdated or wrong rule: 31 March
+Q24 FAIL  2.10s  used outdated or wrong rule: 3 days|three days
+Q25 PASS  1.90s  
+Q26 PASS  0.10s  
+Q27 PASS  1.11s  
+Q28 PASS  1.26s  
+Q29 PASS  1.12s  
+Q30 PASS  1.19s  
+Q31 PASS  1.17s  
+Q32 PASS  1.08s  
+exp-small-k3             acc  96.9  retr 100.0  cite  96.3  words 63.2  1.67s  $0.0065
+exp-small-k5             acc  96.9  retr 100.0  cite 100.0  words 67.9  1.7s  $0.0074
+exp-section-k3           acc 100.0  retr 100.0  cite 100.0  words 60.4  1.32s  $0.0054
+exp-section-k5           acc 100.0  retr 100.0  cite 100.0  words 63.8  1.6s  $0.0065
+exp-large-k3             acc  93.8  retr  81.5  cite  77.8  words 60.6  1.7s  $0.0079
+exp-large-k5             acc  96.9  retr  85.2  cite  85.2  words 63.5  1.95s  $0.0098
+exp-no-version-filter    acc  90.6  retr 100.0  cite 100.0  words 69.7  1.61s  $0.0065

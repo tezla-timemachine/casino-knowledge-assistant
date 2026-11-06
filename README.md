@@ -4,7 +4,7 @@ An internal assistant that answers employees' policy questions **only from appro
 company documents**, shows the document and section it used, and says clearly when
 the answer isn't in the documents.
 
-Week 3 project (RAG Knowledge Management Product). **Status: working app; experiments and evaluation next.**
+Week 3 project (RAG Knowledge Management Product). **Status: working app, evaluated (32 questions) and experiments done. Results: [evaluation sheet](evals/casino-knowledge-assistant-evaluation.xlsx), [experiments](docs/casino-knowledge-assistant-07-experiment-results.md).**
 
 All documents in `data/policies/` are **mock documents for a fictional company**,
 written for this project. They are not real policies and not legal advice.
@@ -34,8 +34,11 @@ With no API key, set `LLM_PROVIDER=mock` to try the app without AI (answers are 
 
 | Command | What it does |
 |---|---|
-| `.venv/bin/python -m pytest` | 35 tests: loading, chunking, version and access filters, answer safety nets, uploads |
+| `.venv/bin/python -m pytest` | 43 tests: loading, chunking, filters, answer safety nets, uploads, evaluation marking |
 | `.venv/bin/python -m app.build_index` | Rebuilds the search index for all three chunking methods |
+| `.venv/bin/python -m evals.run_eval` | Runs the 32 evaluation questions with Claude and scores them (under 1p) |
+| `.venv/bin/python -m evals.run_experiments` | Chunk size, top 3 vs 5 and version-filter experiments (about 5p) |
+| `.venv/bin/python -m evals.make_sheet` | Rebuilds the evaluation spreadsheet from the results |
 
 ## Layout
 

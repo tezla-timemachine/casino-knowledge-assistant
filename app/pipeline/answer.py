@@ -54,9 +54,11 @@ def build_user_message(question: str, hits: list[store.Hit]) -> str:
 
 def ask(question: str, role: str = "Employee", k: int = store.TOP_K, method: str = "section",
         today: date | None = None, path: Path = store.STORE_DIR, min_score: float = MIN_SCORE,
-        complete: Callable = llm.complete) -> Answer:
+        complete: Callable = llm.complete, apply_version_filter: bool = True) -> Answer:
+    """apply_version_filter=False is only for the experiment that shows why the filter is needed."""
     start = time.time()
-    hits = store.search(question, role=role, k=k, method=method, today=today, path=path)
+    hits = store.search(question, role=role, k=k, method=method, today=today, path=path,
+                        apply_version_filter=apply_version_filter)
 
     def done(a: Answer) -> Answer:
         a.retrieved, a.seconds = hits, round(time.time() - start, 2)
