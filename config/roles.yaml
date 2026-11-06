@@ -1,0 +1,6 @@
+# Which document access levels each role can search (D8).
+# V1 uses a "View as" switch. In production, roles would come from company sign-in (SSO) groups.
+roles:
+  Employee: [all_staff]
+  HR: [all_staff, hr]
+  Compliance: [all_staff, compliance]

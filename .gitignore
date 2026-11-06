@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+.streamlit/secrets.toml
+# The vector database is rebuilt from data/policies/, so it isn't committed
+data/vectorstore/
+data/uploads/

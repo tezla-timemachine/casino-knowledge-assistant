@@ -1,0 +1,14 @@
+[theme]
+base = "light"
+primaryColor = "#0F2A44"
+backgroundColor = "#F4F6F9"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1B2430"
+font = "sans serif"
+
+[browser]
+# Don't send Streamlit usage statistics: nothing leaves the machine except the question to Claude.
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
