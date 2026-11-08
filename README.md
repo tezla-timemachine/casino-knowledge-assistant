@@ -35,6 +35,7 @@ cp .env.example .env            # then paste your Anthropic API key into .env yo
 
 The search index is built automatically on first run (the free embedding model downloads once, ~80 MB).
 With no API key, set `LLM_PROVIDER=mock` to try the app without AI (answers are clearly marked as not AI).
+Uploads only work when `ALLOW_UPLOADS=true` is in `.env`. Without it (as on the public site) the Upload tab is switched off.
 
 | Command | What it does |
 |---|---|

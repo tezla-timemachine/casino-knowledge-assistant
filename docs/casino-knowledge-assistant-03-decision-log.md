@@ -33,7 +33,7 @@ Question + user's role
 | D8 | Access control | **"View as" switch (Employee / HR / Compliance)** in V1. Restricted documents are filtered out before the search. Production design: company sign-in (SSO), with roles taken from HR system groups | The brief asks for the design, not a full permission system | Separate database per department; no access control | Restricted documents never reach an unauthorised employee, the AI or the screen |
 | D9 | Citations | Show the **document, version, section and the exact retrieved text**, taken from the database rather than written by the AI | Quotes cannot be invented | Asking the AI to quote | Employees can check the answer themselves |
 | D10 | Upload | PDF, Word or text. **The header fields are required** before a document can be searched | An untagged document would get past the version and access filters | Guessing the header from the file | No document enters search without an owner, status and access level |
-| D11 | Application | **Streamlit**, run locally first. Online hosting only with approval | Same as Week 1, so it's quick to build | A web framework with a separate front end | Fast to demonstrate to stakeholders |
+| D11 | Application | **Streamlit**, run locally first. Online hosting only with approval, and **uploads are off on the public site** | Same as Week 1, so it's quick to build | A web framework with a separate front end | Fast to demonstrate to stakeholders |
 
 ## Decision history
 
@@ -42,3 +42,4 @@ Question + user's role
 | 6 Nov 2026 | D2: free local embeddings rather than Voyage AI | Delivery Lead (Tez) |
 | 6 Nov 2026 | D7: hide superseded versions completely in V1 | Delivery Lead (Tez) |
 | 6 Nov 2026 | D1, D4, D5 confirmed and D7 tested by the RAG experiments (doc 07) | Delivery Lead (Tez) |
+| 8 Nov 2026 | D11: uploads off on the public site, so visitors can't change or replace policies for each other | Delivery Lead (Tez) |

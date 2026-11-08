@@ -28,6 +28,8 @@ from app.pipeline import answer, documents, llm, store  # noqa: E402
 
 st.set_page_config(page_title="Policy Assistant · Harbourlight", page_icon="📘", layout="wide")
 
+# Off unless .env says otherwise. Streamlit Cloud has no .env, so the public site is read-only.
+UPLOADS_ALLOWED = os.getenv("ALLOW_UPLOADS", "false").lower() == "true"
 ROLE_INFO = {
     "Employee": "General policies, handbook and procedures.",
     "HR": "Everything an employee sees, plus HR-only procedures.",
@@ -290,9 +292,14 @@ with library_tab:
 # --- Upload ----------------------------------------------------------------------------------------
 with upload_tab:
     st.markdown("#### Add a policy document")
-    st.caption("PDF, Word (.docx), Markdown or text. Every document needs its details filled in before it "
-               "can be searched. In production, only policy owners would be able to upload.")
-    file = st.file_uploader("Policy file", type=["pdf", "docx", "md", "txt"])
+    if UPLOADS_ALLOWED:
+        st.caption("PDF, Word (.docx), Markdown or text. Every document needs its details filled in before it "
+                   "can be searched. In production, only policy owners would be able to upload.")
+        file = st.file_uploader("Policy file", type=["pdf", "docx", "md", "txt"])
+    else:
+        file = None
+        st.info("Uploads are switched off on this public demo, so nobody can change the policies other "
+                "visitors see. To try uploading, run the app on your own computer (see the README).", icon="🔒")
     if file:
         data = file.getvalue()
         found = documents.read_header(data) if file.name.lower().endswith((".md", ".txt")) else {}

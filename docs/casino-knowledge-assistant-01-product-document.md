@@ -105,7 +105,7 @@ Evidence: [experiment results](casino-knowledge-assistant-07-experiment-results.
 | Who the user is | "View as" switch | Company sign-in (SSO); role from HR system groups |
 | What they can search | Filter applied **before** search, so restricted text never reaches the AI or the screen | Same, extended by department, venue and seniority where needed |
 | What they can see in the library | Only documents they may access | Same |
-| Who can upload | Anyone (demo) | Policy owners only; access level approved by the owner |
+| Who can upload | Anyone running their own copy; switched off on the public demo | Policy owners only; access level approved by the owner |
 | Audit | None | Log of questions, documents used and role; regular access review by Information Security |
 
 ## 7. Risks
@@ -135,7 +135,7 @@ weakly. The answer was incomplete but honest about what was missing.
 - **Tested on 32 questions written alongside the documents.** Real employee questions will be messier.
 - **Marking is automatic** (key facts), so it can be fooled (Q19). The marks need human review.
 - **Tables are stored as one passage**, so one row (e.g. "underage person") can be missed.
-- **No sign-in**: the role switch is a demo stand-in, and anyone can upload.
+- **No sign-in**: the role switch is a demo stand-in, and uploads are simply switched off on the public demo rather than limited to policy owners.
 - **No policy history**: old versions can't be asked about.
 - **One-off questions only**: no follow-up conversation.
 - **Text documents only**: no OCR for scanned PDFs.
